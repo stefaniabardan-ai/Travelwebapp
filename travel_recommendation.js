@@ -19,9 +19,12 @@ fetch('travel_recommendation_api.json')
        data.forEach(place => {
         //Create HTML elements to display the place information
         const placeDiv = document.createElement('div');
-        placeDiv.innerHTML
-             <h3>${place.name}</h3>
-             <><img src="${place.image_url}" alt="${place.name}" /><p>${place.description}</p><p>Location: ${place.location}</p></>;
+        placeDiv.innerHTML = `
+            <h3>${place.name}</h3>
+            <img src="${place.image_url}" alt="${place.name}" />
+            <p>${place.description}</p>
+            <p>Location: ${place.location}</p>
+        `;
 
              //Append the placeDiv to a container element on the webpage
              document.getElementById('results').appendChild(placeDiv);
